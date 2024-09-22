@@ -20,17 +20,33 @@ class Node{
     this->next = NULL;
     }
 };
+void printLL(Node* head){
+    //whenever linkedlist passed in head pointer or tail pointer
+    // we will not use original pointer, we will make temporary pointer
+    Node* temp = head;
 
+    while(temp!=NULL){
+        cout<<temp<<data;
+
+        temp=temp->next;
+
+    }
+}
 int main(){
     //static allocation
-    //Node a;
-
+    //Node 
     //Dynamic allocation
     Node* first = new Node(10);     
     Node* second = new Node(20);
     Node* third = new Node(30);
     Node* fourth = new Node(40);
     Node* fifth = new Node(50);
+    first->next=second;
+    second->next=third;
+    third->next=fourth;
+    fourth->next=NULL;
+    Node* head = first;
+
     return 0;
    }
     
